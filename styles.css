@@ -263,3 +263,14 @@ form[data-freq="biweekly"] .f-weekly { display: flex; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .c-line { stroke-dashoffset: 0; } }
 .car { align-items: flex-start; }
 .card.debt > .row, .client > .row { gap: 12px; }
+.ask-card { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, color-mix(in srgb, var(--vio) 22%, var(--card)), var(--card)); }
+.chat { display: flex; flex-direction: column; gap: 10px; max-height: 52vh; overflow-y: auto; padding: 4px 2px; }
+.bub { max-width: 88%; padding: 11px 14px; border-radius: 18px; font-size: 14px; line-height: 1.45; animation: nb-fade .3s both; }
+.bub p { margin: 0 0 6px; } .bub p:last-child { margin: 0; }
+.bub.ai { background: var(--card2); border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 6px; font-weight: 400; }
+.bub.me { background: var(--vio); color: #fff; align-self: flex-end; border-bottom-right-radius: 6px; }
+.qchips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 12px 0 8px; }
+.qchips .chip { flex: none; }
+.askbar { display: flex; gap: 8px; position: sticky; bottom: 0; background: var(--card); padding-top: 4px; }
+.askbar input { flex: 1; min-height: 48px; padding: 0 16px; border-radius: 99px; background: var(--card2); border: 1px solid var(--line); outline: none; }
+.askbar .btn { min-width: 48px; padding: 0; }

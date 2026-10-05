@@ -178,7 +178,7 @@
       '<header class="top"><div><span class="mut small">' + NB.greeting() + '</span><h1>' + esc(s.settings.name || 'Hola') + '</h1></div>' + NB.logo(34) + '</header>' +
       '<div class="car" id="car">' + ws.map((w) => w).join('') + '</div>' +
       '<div class="dots" id="dots">' + ws.map((_, i) => '<i class="' + (i === 0 ? 'on' : '') + '"></i>').join('') + '</div>' +
-      start + alertsHtml + plan + (next ? '<section><h2 class="sec">Apartados por fecha</h2>' + next + '</section>' : '') + week
+      start + (NB.advisorCard ? NB.advisorCard() : '') + alertsHtml + plan + (next ? '<section><h2 class="sec">Apartados por fecha</h2>' + next + '</section>' : '') + week
     );
   };
 
@@ -375,6 +375,7 @@
       '<section><h2 class="sec">Tu dinero</h2><div class="card list">' +
       row('user', 'Clientes', act + ' ' + NB.plural(act, 'activo', 'activos') + ' · días de pago y montos', 'clients') +
       row('spark', 'Plan del mes', NB.PLANS[NB.currentPlanKey(NB.today())].name + ' · cambia el ahorro de cada plan', 'plans') +
+      row('spark', 'Asesor', 'Pregunta cuánto apartar, ahorrar o gastar', 'advisor') +
       row('list', 'Categorías y presupuesto', 'Crea categorías y límites por semana', 'cats') +
       row('dollar', 'Gastos de la semana', 'Gasolina ' + NB.money0(s.expense.gasolina) + ' · comida ' + NB.money0(s.expense.comida), 'weekly') +
       row('card', 'Saldo disponible', 'Corrige el dinero que tienes hoy', 'balance') +
