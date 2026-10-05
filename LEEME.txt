@@ -1,0 +1,18 @@
+NOIR BALANCE · Cómo ponerla en tu iPhone (gratis)
+
+1) Entra a github.com e inicia sesión.
+2) Arriba a la derecha toca "+" > "New repository". Nombre: noir-balance. Déjalo en "Public". Toca "Create repository".
+3) En la página que sale, toca "uploading an existing file".
+4) Descomprime este zip en tu computadora y arrastra TODO lo que hay adentro
+   (index.html, styles.css, sw.js, manifest.webmanifest y las carpetas "js" e "icons") a esa página.
+   Importante: arrastra el contenido, no la carpeta contenedora. Toca "Commit changes".
+5) Ve a Settings > Pages. En "Branch" elige "main" y "/ (root)". Toca Save.
+6) Espera 1-2 minutos. Arriba aparecerá tu link: https://TU-USUARIO.github.io/noir-balance/
+7) Abre ese link en SAFARI en tu iPhone. Toca el botón Compartir > "Agregar a pantalla de inicio".
+8) Abre Noir Balance desde ese ícono: crea tu PIN de 6 dígitos y listo.
+
+Notas
+- Abre la app una vez con internet para que se guarde todo; después funciona sin conexión.
+- Tus datos viven solo en tu iPhone. Haz un respaldo seguido en Ajustes > Respaldo.
+- Si olvidas el PIN, la única salida es borrar los datos (por eso el respaldo).
+- Si borras el ícono o los datos de Safari, se borran tus datos: respalda antes.
