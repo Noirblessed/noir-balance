@@ -76,7 +76,25 @@
     });
     return out;
   };
-  const byGroupDue = (a, b) => a.group - b.group || a.due - b.due || a.debt.name.localeCompare(b.debt.name);
+  /* Orden de prioridad personalizado (lo fija el Asesor): lista de ids de pagos y fecha límite opcional */
+  NB.priorityActive = (today) => {
+    const p = NB.state && NB.state.settings.priority;
+    if (!p || !Array.isArray(p.order) || !p.order.length) return null;
+    if (p.until && NB.ymd(today || NB.today()) > p.until) return null;
+    return p;
+  };
+  const byGroupDue = (a, b) => {
+    const p = NB.priorityActive();
+    if (p) {
+      const ia = p.order.indexOf(a.debt.id);
+      const ib = p.order.indexOf(b.debt.id);
+      const ra = ia < 0 ? 9999 : ia;
+      const rb = ib < 0 ? 9999 : ib;
+      if (ra !== rb) return ra - rb;
+    }
+    return a.group - b.group || a.due - b.due || a.debt.name.localeCompare(b.debt.name);
+  };
+  NB.orderedInstances = (today) => NB.instances(today).sort(byGroupDue);
   const byDue = (a, b) => a.due - b.due || a.group - b.group;
   NB.instancesByDue = (today) => NB.instances(today).sort(byDue);
 

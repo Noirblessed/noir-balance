@@ -274,3 +274,14 @@ form[data-freq="biweekly"] .f-weekly { display: flex; }
 .askbar { display: flex; gap: 8px; position: sticky; bottom: 0; background: var(--card); padding-top: 4px; }
 .askbar input { flex: 1; min-height: 48px; padding: 0 16px; border-radius: 99px; background: var(--card2); border: 1px solid var(--line); outline: none; }
 .askbar .btn { min-width: 48px; padding: 0; }
+
+/* Asesor v2 */
+.bchips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.bbtns { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.chip.tp { border-color: var(--accent, #E8474A); }
+.card.insights { display:flex; flex-direction:column; gap:10px; }
+.ins { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:14px; background: rgba(127,127,127,.10); font-size:14px; line-height:1.35; }
+.ins-ic { flex:none; width:8px; height:8px; border-radius:50%; margin-top:6px; background:#8a8a99; }
+.ins.bad .ins-ic { background:#E8474A; } .ins.warn .ins-ic { background:#F0A33A; }
+.ins.info .ins-ic { background:#7A5CFF; } .ins.good .ins-ic { background:#3CC47C; }
+.icon-btn.sm { width:30px; height:30px; }

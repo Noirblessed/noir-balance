@@ -1,7 +1,7 @@
 /* Noir Balance · funciona sin internet */
-const V = 'nb-v2';
+const V = 'nb-v3';
 const SHELL = ['./', 'index.html', 'styles.css', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
-  'js/util.js', 'js/store.js', 'js/plan.js', 'js/charts.js', 'js/ics.js', 'js/ui-core.js', 'js/views.js', 'js/sheets.js', 'js/advisor.js', 'js/app.js'];
+  'js/util.js', 'js/store.js', 'js/plan.js', 'js/charts.js', 'js/ics.js', 'js/ui-core.js', 'js/views.js', 'js/sheets.js', 'js/knowledge.js', 'js/knowledge2.js', 'js/knowledge3.js', 'js/advisor.js', 'js/app.js'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
