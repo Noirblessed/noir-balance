@@ -16,3 +16,4 @@ Notas
 - Tus datos viven solo en tu iPhone. Haz un respaldo seguido en Ajustes > Respaldo.
 - Si olvidas el PIN, la única salida es borrar los datos (por eso el respaldo).
 - Si borras el ícono o los datos de Safari, se borran tus datos: respalda antes.
+v2
